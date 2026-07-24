@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$POTATO — The Fluffiest Good Boy on Solana</title>
+  <meta name="description" content="Meet $POTATO — a fluffy apricot toy poodle turned Solana memecoin. 100% good boy, community owned, powered by zoomies. #LifeOfPotato" />
+
+  <meta property="og:title" content="$POTATO — The Fluffiest Good Boy on Solana" />
+  <meta property="og:description" content="A real fluffy toy poodle named Potato, now a community memecoin on Solana. #LifeOfPotato" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/potato-square.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/potato-face.jpg" type="image/jpeg" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__pup"><img src="assets/potato-face.jpg" alt="Potato" /></div>
+      <div class="preloader__bar"><span id="preloaderFill"></span></div>
+      <p class="preloader__label">FETCHING THE GOOD BOY…</p>
+    </div>
+  </div>
+
+  <!-- Paw glyph for reuse -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="paw" viewBox="0 0 100 100">
+        <ellipse cx="50" cy="64" rx="26" ry="21" fill="currentColor"/>
+        <ellipse cx="24" cy="38" rx="10" ry="13" fill="currentColor"/>
+        <ellipse cx="42" cy="26" rx="10" ry="13" fill="currentColor"/>
+        <ellipse cx="62" cy="26" rx="10" ry="13" fill="currentColor"/>
+        <ellipse cx="78" cy="38" rx="10" ry="13" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand" data-magnetic>
+      <span class="nav__logo"><img src="assets/potato-face.jpg" alt="Potato the toy poodle" /></span>
+      <span>$POTATO</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#story" data-magnetic>Story</a>
+      <a href="#traits" data-magnetic>Traits</a>
+      <a href="#buy" data-magnetic>How to Buy</a>
+      <a href="#gallery" data-magnetic>Gallery</a>
+      <a href="#roadmap" data-magnetic>Roadmap</a>
+    </nav>
+    <a class="btn btn--sm" href="https://x.com/i/communities/2013224328129663288" target="_blank" rel="noopener" data-magnetic>
+      Join the Pack
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <div class="hero__tag" data-reveal>🐾 A very real, very fluffy dog</div>
+        <h1 class="hero__title">
+          <span class="line"><span class="word">MEET</span></span>
+          <span class="line"><span class="word word--accent">$POTATO</span></span>
+        </h1>
+        <p class="hero__sub" data-reveal>
+          The fluffiest good boy on Solana. A real apricot toy poodle,
+          freshly groomed and fully community-owned. No leash, no roadmap to nowhere —
+          just pure fluff, zoomies, and diamond paws. <strong>#LifeOfPotato</strong>
+        </p>
+        <div class="hero__cta" data-reveal>
+          <a class="btn btn--lg" href="https://pump.fun/coin/8aLzkFAgbULQyL6QyeuH84Pxe2EdJdmZfqWpZRYvpump" target="_blank" rel="noopener" data-magnetic>
+            <span>Buy $POTATO</span>
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="https://x.com/i/communities/2013224328129663288" target="_blank" rel="noopener" data-magnetic>
+            Join the Pack
+          </a>
+        </div>
+        <button class="ca-chip" id="caChip" data-magnetic>
+          <span class="ca-chip__label">CA</span>
+          <span class="ca-chip__addr" id="caAddr">8aLzkFAgbULQyL6QyeuH84Pxe2EdJdmZfqWpZRYvpump</span>
+          <span class="ca-chip__copy" id="caCopy">Copy</span>
+        </button>
+      </div>
+
+      <div class="hero__stage" data-tilt>
+        <div class="orbit orbit--1" aria-hidden="true"></div>
+        <div class="orbit orbit--2" aria-hidden="true"></div>
+        <div class="hero__photo">
+          <img src="assets/potato-square.jpg" alt="Potato, a fluffy apricot toy poodle, looking at the camera" />
+        </div>
+        <span class="badge badge--paw" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#paw"/></svg></span>
+        <span class="badge badge--heart" aria-hidden="true">❤</span>
+        <span class="badge badge--star" aria-hidden="true">★</span>
+        <span class="float-pup float-pup--1"><img src="assets/potato-face.jpg" alt="" aria-hidden="true" /></span>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>SCROLL</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marquee">
+      <span>$POTATO&nbsp; 🐾 &nbsp;#LIFEOFPOTATO&nbsp; 🐾 &nbsp;100% GOOD BOY&nbsp; 🐾 &nbsp;FLUFF SZN&nbsp; 🐾 &nbsp;FRESHLY GROOMED&nbsp; 🐾 &nbsp;DIAMOND PAWS&nbsp; 🐾 &nbsp;</span>
+      <span>$POTATO&nbsp; 🐾 &nbsp;#LIFEOFPOTATO&nbsp; 🐾 &nbsp;100% GOOD BOY&nbsp; 🐾 &nbsp;FLUFF SZN&nbsp; 🐾 &nbsp;FRESHLY GROOMED&nbsp; 🐾 &nbsp;DIAMOND PAWS&nbsp; 🐾 &nbsp;</span>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section class="story" id="story">
+    <div class="story__grid">
+      <div class="story__art">
+        <div class="story__frame" data-tilt>
+          <img src="assets/potato-coin.jpg" alt="Potato the toy poodle standing on the floor" />
+          <span class="story__sticker">100% GOOD BOY</span>
+        </div>
+      </div>
+      <div class="story__copy">
+        <p class="eyebrow" data-reveal>// The Origin Tail</p>
+        <h2 class="section-title" data-reveal-lines>
+          One small dog. <em>One giant</em> zoomie.
+        </h2>
+        <p class="story__lead" data-reveal>
+          Potato is a real apricot toy poodle — the kind of fluff that turns heads at the dog park.
+          It all started when dad snuck him to the groomers without telling mum. The internet fell in love,
+          the pack grew, and one legendary haircut later, $POTATO hit the Solana blockchain.
+          No VCs, no insiders. Just a very good boy and the people who adore him.
+        </p>
+        <div class="story__stats">
+          <div class="stat" data-reveal>
+            <span class="stat__num" data-count="100">0</span><span class="stat__suffix">%</span>
+            <span class="stat__label">Community owned</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat__num" data-count="0">0</span><span class="stat__suffix">%</span>
+            <span class="stat__label">Team allocation</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat__num" data-count="1">0</span><span class="stat__suffix">B</span>
+            <span class="stat__label">Total supply</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAITS -->
+  <section class="tok" id="traits">
+    <div class="tok__head">
+      <p class="eyebrow" data-reveal>// Certified Good Boy Traits</p>
+      <h2 class="section-title section-title--center" data-reveal-lines>Why Potato Hits Different</h2>
+    </div>
+    <div class="tok__cards">
+      <article class="tcard" data-reveal>
+        <div class="tcard__icon">🧸</div>
+        <h3>Maximum Fluff</h3>
+        <p>Freshly groomed, endlessly pettable. This poodle floof is scientifically irresistible.</p>
+      </article>
+      <article class="tcard" data-reveal>
+        <div class="tcard__icon">🔥</div>
+        <h3>LP Burned</h3>
+        <p>Liquidity locked and torched. This good boy isn't going anywhere. Loyal to the core.</p>
+      </article>
+      <article class="tcard" data-reveal>
+        <div class="tcard__icon">🐾</div>
+        <h3>Fair Launch</h3>
+        <p>Planted on pump.fun with no pre-sale and no insiders. Everyone fetches at the same line.</p>
+      </article>
+      <article class="tcard" data-reveal>
+        <div class="tcard__icon">💎</div>
+        <h3>0% Tax</h3>
+        <p>Buy, sell, or hodl with diamond paws — the taxman doesn't get a single kibble. Ever.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- HOW TO BUY -->
+  <section class="buy" id="buy">
+    <div class="buy__head">
+      <p class="eyebrow" data-reveal>// From Zero to Zoomies</p>
+      <h2 class="section-title section-title--center" data-reveal-lines>How to Buy</h2>
+    </div>
+    <div class="buy__steps">
+      <div class="step" data-reveal>
+        <span class="step__num">01</span>
+        <h3>Get a Wallet</h3>
+        <p>Download <strong>Phantom</strong> or any Solana wallet. Takes 60 seconds, no obedience school required.</p>
+      </div>
+      <div class="step" data-reveal>
+        <span class="step__num">02</span>
+        <h3>Load up SOL</h3>
+        <p>Grab some SOL from any exchange and send it to your wallet. That's your treat jar.</p>
+      </div>
+      <div class="step" data-reveal>
+        <span class="step__num">03</span>
+        <h3>Swap for $POTATO</h3>
+        <p>Head to pump.fun, paste the contract, and trade your SOL for the fluffiest coin on Solana.</p>
+      </div>
+      <div class="step" data-reveal>
+        <span class="step__num">04</span>
+        <h3>Join the Pack</h3>
+        <p>Hop into the community, post memes, and enjoy the zoomies. Welcome to the family.</p>
+      </div>
+    </div>
+    <div class="buy__cta" data-reveal>
+      <a class="btn btn--lg" href="https://pump.fun/coin/8aLzkFAgbULQyL6QyeuH84Pxe2EdJdmZfqWpZRYvpump" target="_blank" rel="noopener" data-magnetic>Fetch $POTATO →</a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__head">
+      <p class="eyebrow" data-reveal>// #LifeOfPotato</p>
+      <h2 class="section-title section-title--center" data-reveal-lines>The Floof Files</h2>
+    </div>
+    <div class="gallery__grid">
+      <figure class="gitem gitem--tall" data-reveal>
+        <img src="assets/potato-square.jpg" alt="Potato the toy poodle looking up" />
+        <figcaption>Certified head tilt</figcaption>
+      </figure>
+      <figure class="gitem" data-reveal>
+        <img src="assets/potato-face.jpg" alt="Close up of Potato's fluffy face" />
+        <figcaption>The floof, up close</figcaption>
+      </figure>
+      <figure class="gitem" data-reveal>
+        <img src="assets/potato-square2.jpg" alt="Potato mid walk on the floor" />
+        <figcaption>Post-groomer strut</figcaption>
+      </figure>
+      <figure class="gitem gitem--wide" data-reveal>
+        <img src="assets/ig-post-1.jpg" alt="Potato walking towards the camera" />
+        <figcaption>“Dad, don't tell mum.” 🫢</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="road" id="roadmap">
+    <div class="road__head">
+      <p class="eyebrow" data-reveal>// The Zoomies Roadmap</p>
+      <h2 class="section-title section-title--center" data-reveal-lines>Roadmap</h2>
+    </div>
+    <div class="road__line">
+      <div class="phase" data-reveal>
+        <span class="phase__dot"></span>
+        <span class="phase__tag">Phase 1</span>
+        <h3>Sit</h3>
+        <p>Fair launch, the pack forms, memes start flowing. Good boy stays. Good boy waits.</p>
+      </div>
+      <div class="phase" data-reveal>
+        <span class="phase__dot"></span>
+        <span class="phase__tag">Phase 2</span>
+        <h3>Fetch</h3>
+        <p>1,000 holders, trending on Solana, listings roll in. Potato brings the gains back.</p>
+      </div>
+      <div class="phase" data-reveal>
+        <span class="phase__dot"></span>
+        <span class="phase__tag">Phase 3</span>
+        <h3>Zoomies</h3>
+        <p>CEX listings, merch drops, viral takeover. The whole timeline gets the zoomies.</p>
+      </div>
+      <div class="phase" data-reveal>
+        <span class="phase__dot"></span>
+        <span class="phase__tag">Phase 4</span>
+        <h3>Best in Show</h3>
+        <p>$POTATO becomes the most beloved dog on the chain. Blue ribbon, diamond paws.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta__inner">
+      <div class="cta__pup"><img src="assets/potato-face.jpg" alt="Potato" /></div>
+      <h2 class="cta__title" data-reveal-lines>Don't leave the good boy waiting.</h2>
+      <p class="cta__sub" data-reveal>The pack is growing fast. Grab your leash and join the fluffiest community on Solana.</p>
+      <div class="cta__btns" data-reveal>
+        <a class="btn btn--lg" href="https://x.com/i/communities/2013224328129663288" target="_blank" rel="noopener" data-magnetic>Join the Pack</a>
+        <a class="btn btn--ghost btn--lg" href="https://www.instagram.com/im.potatoooo/" target="_blank" rel="noopener" data-magnetic>Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__top">
+      <a href="#top" class="footer__brand" data-magnetic>
+        <span class="footer__logo"><img src="assets/potato-face.jpg" alt="Potato" /></span>
+        <span>$POTATO</span>
+      </a>
+      <div class="footer__socials">
+        <a href="https://x.com/i/communities/2013224328129663288" target="_blank" rel="noopener" data-magnetic>X Community</a>
+        <a href="https://www.instagram.com/im.potatoooo/" target="_blank" rel="noopener" data-magnetic>Instagram</a>
+        <a href="https://pump.fun/coin/8aLzkFAgbULQyL6QyeuH84Pxe2EdJdmZfqWpZRYvpump" target="_blank" rel="noopener" data-magnetic>pump.fun</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>$POTATO is a memecoin celebrating a very good dog. It has no intrinsic value or expectation of financial return and exists for entertainment only. Always DYOR.</p>
+      <p class="footer__copy">© 2026 $POTATO — a very good boy.</p>
+    </div>
+  </footer>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
